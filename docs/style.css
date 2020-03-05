@@ -1,22 +1,76 @@
 body {
     margin: 0 0 0 0;
-    padding: 0 0 0 0 id;
+    padding: 0 0 0 0;
 }
 
+/*//////////////////////* início estilos do header///////////////////////////*/
 header{
     background-color: orange;
     display: flex;
     height: 100px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     min-width: 100vw;
+    position: sticky;
+    text-align: center;
 }
 
-header>div {
+header>h1 {
     font-size: 40px;
-    margin-left: 40px;
+    
+    text-align: center;
+}
+input {
+    height: 35px;
+    padding-left: 20px;
+    margin-right: 40px;
 }
 
+/*//////////////////////* fim estilos do header///////////////////////////*/
+
+/*//////////////////////* início estilos menulat///////////////////////////*/
+#check {
+    display: none  ;
+}
+#icone {
+    cursor: pointer;
+    padding: 35px;
+    position: absolute;
+    z-index: 1;
+}
+.barralat {
+    background-color: orange;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+
+ 
+}
+nav {
+    width: 100%;
+    position: relative;
+    
+}
+nav a {
+    text-decoration: none;
+}
+.linkmenu {
+    background-color: peru;
+    padding: 20px;
+    font-family: 'Arial';
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+}
+.linkmenu:hover {
+    background-color: orangered;
+}
+#check:checked ~ .barralat {
+transform: translateX(300px);
+}
+
+/*//////////////////////* início estilos do footer///////////////////////////*/
 footer {
     background-color: #323B3E;
     color: white;
@@ -28,13 +82,9 @@ footer {
     width: 100vw;
     font-size: 40px;
 }
+/*//////////////////////* fim estilos do footer///////////////////////////*/
 
-input {
-    height: 35px;
-    padding-left: 20px;
-    margin-right: 40px;
-}
-
+/*//////////////////////* início estilos body ///////////////////////////*/
 a {
     text-decoration: none;
     color: black;
@@ -65,7 +115,7 @@ section {
     width: 90vw;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
     justify-items: center;
@@ -74,38 +124,41 @@ section {
 
 #video1 {
     grid-row: 1/2;
-    grid-column: 1/2;
+    grid-column: 2/3;
 
 }
 #video2 {
     grid-row: 1/2;
-    grid-column: 2/3;
+    grid-column: 3/4;
 }
 #video3 {
     grid-row: 1/2;
-    grid-column: 3/4;
+    grid-column: 4/5;
 }
 #video4 {
     grid-row: 1/2;
-    grid-column: 4/5;
+    grid-column: 5/6;
 }
 #video5 {
     grid-row: 2/3;
-    grid-column: 1/2;
+    grid-column: 2/3;
 }
 #video6 {
     grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 3/4;
 }
 #video7 {
     grid-row: 2/3;
-    grid-column: 3/4;
+    grid-column: 4/5;
 }
 #video8 {
     grid-row: 2/3;
-    grid-column: 4/5;
+    grid-column: 5/6;
 }
+/*//////////////////////* fim estilos do body ///////////////////////////*/
 
+
+/*//////////////////////* início estilos de responsividade///////////////////////////*/
 @media screen and (max-width: 1350px) {
 
     section {
@@ -161,3 +214,4 @@ section {
         grid-column: 4/5;
     } */
 }
+/*//////////////////////* fim estilos de responsividade///////////////////////////*/

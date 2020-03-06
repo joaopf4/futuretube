@@ -28,7 +28,8 @@ input {
 
 /*//////////////////////* fim estilos do header///////////////////////////*/
 
-/*//////////////////////* início estilos menulat///////////////////////////*/
+/*//////////////////////* início estilos barra lat///////////////////////////*/
+/*lado esquerdo*/
 #check {
     display: none  ;
 }
@@ -43,8 +44,6 @@ input {
     height: 100%;
     width: 300px;
     position: absolute;
-
- 
 }
 nav {
     width: 100%;
@@ -69,7 +68,15 @@ nav a {
 #check:checked ~ .barralat {
 transform: translateX(300px);
 }
-/*//////////////////////* fim estilos menulat///////////////////////////*/
+/*lado direito*/
+.barralatDir {
+    background-color: orange;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    right: 0;
+}
+/*//////////////////////* fim estilos barra lat///////////////////////////*/
 
 /*//////////////////////* início estilos do footer///////////////////////////*/
 footer {
@@ -86,6 +93,18 @@ footer {
 /*//////////////////////* fim estilos do footer///////////////////////////*/
 
 /*//////////////////////* início estilos body ///////////////////////////*/
+video {
+    max-width: 800px;
+    max-height: 600px;
+}
+.videoDetail {
+    height: 100vh;
+    margin: 30px auto auto 315px;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #323B3E;
+}
 a {
     text-decoration: none;
     color: black;
@@ -93,16 +112,49 @@ a {
 a:hover {
     font-weight: bolder;
 }
+.legenda {
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+.button:hover {
+    background-color: orangered;
+}
 
 .videos {
-
     display: flex;
     align-items: inherit;
     justify-content: center;
     padding-bottom: 10px;
     width: 270px;
     height: 150px;
-    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #323B3E;
+
+}
+.barralatDir .videos {
+    display: flex;
+    align-items: inherit;
+    justify-content: center;
+    padding-bottom: 10px;
+    width: 270px;
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #323B3E;
+    margin: 40px auto auto auto;
 }
 
 .videos img {
